@@ -1,0 +1,28 @@
+
+
+
+.star-content::after {
+  content:"";
+  background-color: white;
+  height: 5px;
+  width: 100px;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  right: 20px;
+}
+
+.star-content::before {
+  content:"";
+  background-color: white;
+  height: 5px;
+  width: 100px;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left: 20px;
+}
+
+.star-content.dark::after, .star-content.dark::before {
+  background-color: rgb(44, 62, 80);
+}

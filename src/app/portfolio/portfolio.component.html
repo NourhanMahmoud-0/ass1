@@ -1,0 +1,32 @@
+
+
+
+<div class="container text-center ">
+  <h1>portfolio component  </h1>
+  <div class="d-flex justify-content-center">
+    <app-star [color]="'dark'" class="w-25 d-block"></app-star>
+  </div>
+  <div class="row">
+    @for (url of imagesUrl; track $index) {
+      <div class="col-md-4">
+        <figure (click)="isHidden = false; modelImage = url">
+          <img [src]="url" class="w-100" alt="">
+        </figure>
+    </div>
+    }
+
+  </div>
+
+
+
+
+
+  <div
+
+  (click)="closeSlide($event['target'], imgRef)"
+  [class.d-none]="isHidden"
+
+  class="position-fixed top-0 end-0 start-0 bottom-0 d-flex align-items-center justify-content-center" id="lightBox">
+    <img #imgRef [src]="modelImage" class="w-40" alt="">
+  </div>
+</div>

@@ -1,0 +1,7 @@
+label {
+  transition: all 0.3s;
+}
+
+.__top {
+  top: 40px !important;
+}
